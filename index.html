@@ -7,10 +7,12 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <a-assets>
-      <a-asset-item id="xwing" src="./xwing.glb"></a-asset-item>
+      <a-asset-item id="xwing" src=""></a-asset-item>
     </a-assets>      
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" gltf-model="#tree"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#xwing" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+      </a-entity>
     </a-scene>
   </body>
 </html>
